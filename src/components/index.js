@@ -14,7 +14,7 @@ const StateHOC = (WrappedComponent) => {
     }
 
     handleChange = (value) => {
-      const { name, validator, onData } = this.props;
+      const { name, validator, handleFieldInput } = this.props;
       let error = null;
 
       if (typeof validator === 'function') {
@@ -24,7 +24,7 @@ const StateHOC = (WrappedComponent) => {
       this.setState({
         error
       }, () => {
-          typeof onData === 'function' && onData({ value, error, id: name })
+          typeof handleFieldInput === 'function' && handleFieldInput({ value, error, id: name })
       })
     }
 

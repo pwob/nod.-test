@@ -37,8 +37,8 @@ const DropDown = ({ handleChange, value, id, name, options, meta, ...props }) =>
 
   return (
     <Multi>
-      <Label>{name}: </Label>
-      <Select>
+      <Label htmlFor={id}>{name}: </Label>
+      <Select id={id}>
         <Selected>
           {
             [...selected].map(item => {

@@ -41,7 +41,7 @@ function App({ source }) {
       const populateDate = () => {
         const list = Array.isArray(source) ? source : [];
         return list.map((field, index) => {
-          return <Field key={field.id} {...field} eventHandlers={{ onData: handleFieldInput }} />
+          return <Field key={field.id} {...field} eventHandlers={{ handleFieldInput }} />
         })
       }
 
