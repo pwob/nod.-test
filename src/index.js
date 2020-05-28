@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import db from './database.json';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App source={db}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
